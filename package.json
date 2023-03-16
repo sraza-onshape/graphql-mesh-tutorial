@@ -18,6 +18,8 @@
     "start-multiple-sources-prog-resolvers": "concurrently --kill-others \"yarn workspace authors-service start\" \"yarn workspace stores-service start\"  \"yarn workspace books-service start\"  \"yarn workspace multiple-sources-prog-resolvers start\""
   },
   "dependencies": {
-    "concurrently": "^7.0.0"
+    "@graphql-mesh/cli": "0.82.25",
+    "concurrently": "^7.0.0",
+    "graphql": "16.6.0"
   }
 }
