@@ -19,6 +19,7 @@
   "dependencies": {
     "@graphql-mesh/cli": "0.82.25",
     "@graphql-mesh/openapi": "0.35.23",
+    "@graphql-mesh/transform-naming-convention": "0.13.19",
     "concurrently": "^7.0.0",
     "graphql": "16.6.0"
   }
