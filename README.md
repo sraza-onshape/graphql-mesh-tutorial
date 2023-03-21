@@ -1,13 +1,31 @@
 # GraphQL Mesh Services examples
 
+*Originally found [here](https://the-guild.dev/graphql/mesh/docs/getting-started/installation) - thanks to the team behind GraphQL Tools!*
+
 ## Setup
 
 
 ### Build all APIs
 
+First, if you are new to using `yarn`, then you'll need to install its `workspace-tools` plugin - this is a one-time action:
+
+```bash
+$ yarn plugin import workspace-tools
 ```
-yarn workspaces run build
+
+Then, `cd` into each package and run the following:
+```bash
+$ mkdir dist
+$ npm run build
+$ yarn install
 ```
+
+Then, `cd` back to this root directory and run:
+
+```bash
+$ yarn workspaces foreach run build
+```
+For more info on this command, see the `yarn` docs [here](https://yarnpkg.com/cli/workspaces/foreach#options-A%2C-all).
 
 <p>&nbsp;</p>
 

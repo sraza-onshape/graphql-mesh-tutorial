@@ -123,9 +123,9 @@ export type DirectiveResolverFn<TResult = {}, TParent = {}, TContext = {}, TArgs
 /** Mapping between all available schema types and the resolvers types */
 export type ResolversTypes = ResolversObject<{
   Query: ResolverTypeWrapper<{}>;
+  String: ResolverTypeWrapper<Scalars['String']>;
   Int: ResolverTypeWrapper<Scalars['Int']>;
   Book: ResolverTypeWrapper<Book>;
-  String: ResolverTypeWrapper<Scalars['String']>;
   Category: ResolverTypeWrapper<Category>;
   Boolean: ResolverTypeWrapper<Scalars['Boolean']>;
 }>;
@@ -133,9 +133,9 @@ export type ResolversTypes = ResolversObject<{
 /** Mapping between all available schema types and the resolvers parents */
 export type ResolversParentTypes = ResolversObject<{
   Query: {};
+  String: Scalars['String'];
   Int: Scalars['Int'];
   Book: Book;
-  String: Scalars['String'];
   Category: Category;
   Boolean: Scalars['Boolean'];
 }>;
@@ -208,6 +208,11 @@ export type Query = {
 };
 
 
+export type QuerybookArgs = {
+  id: Scalars['String'];
+};
+
+
 export type QuerybooksArgs = {
   limit?: InputMaybe<Scalars['Int']>;
 };
@@ -234,7 +239,7 @@ export type Category = {
   /** 
 
 Equivalent to GET /books/{id} **/
-  book: InContextSdkMethod<BooksTypes.Query['book'], {}, MeshContext>,
+  book: InContextSdkMethod<BooksTypes.Query['book'], BooksTypes.QuerybookArgs, MeshContext>,
   /** 
 
 Equivalent to GET /books **/
