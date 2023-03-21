@@ -4,7 +4,6 @@
   "main": "index.js",
   "author": "Charly POLY",
   "license": "MIT",
-  "private": "true",
   "scripts": {
     "prebuild": "graphql-codegen",
     "build": "esbuild ./index.js --bundle --platform=node --target=node17.4 > dist/index.js",

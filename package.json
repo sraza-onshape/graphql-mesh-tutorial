@@ -5,7 +5,6 @@
   "repository": "https://github.com/charlypoly/graphql-mesh-docs-first-gateway.git",
   "author": "Charly POLY <cpoly55@gmail.com>",
   "license": "MIT",
-  "private": "true",
   "workspaces": {
     "packages": [
       "packages/*"
@@ -19,6 +18,7 @@
   },
   "dependencies": {
     "@graphql-mesh/cli": "0.82.25",
+    "@graphql-mesh/openapi": "0.35.23",
     "concurrently": "^7.0.0",
     "graphql": "16.6.0"
   }

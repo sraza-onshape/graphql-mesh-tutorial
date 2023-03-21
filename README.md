@@ -1,5 +1,7 @@
 # GraphQL Mesh Services examples
 
+*Originally found [here](https://the-guild.dev/graphql/mesh/docs/getting-started/installation) - thanks to the team behind GraphQL Tools!*
+
 ## Setup
 
 

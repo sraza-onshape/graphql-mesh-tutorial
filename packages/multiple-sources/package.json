@@ -4,7 +4,6 @@
   "main": "index.js",
   "author": "Charly POLY",
   "license": "MIT",
-  "private": "true",
   "scripts": {
     "start": "mesh dev",
     "build": "echo \"noop\";"

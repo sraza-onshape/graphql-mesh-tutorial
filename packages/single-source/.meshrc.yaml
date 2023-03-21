@@ -3,6 +3,7 @@ sources:
     handler:
       openapi:
         baseUrl: http://localhost:3002/
+        # below, this allows Mesh to translate the OpenAPI JSON definition to a GraphQL Schema.
         source: ../books-service/openapi3-definition.json
 transforms:
   - filterSchema:
