@@ -5,12 +5,14 @@ sources:
         baseUrl: http://localhost:3002/
         # below, this allows Mesh to translate the OpenAPI JSON definition to a GraphQL Schema.
         source: ../books-service/openapi3-definition.json
+# these 'transforms' are functions applied after the initial schema generation!
 transforms:
+  # what follows below - we list out the transforms we're going to use
   - filterSchema:
       filters:
-        - Query.!book
+        - Query.!book  # e.g., this can be used to remove a field from our schema
   - rename:
-      renames:
+      renames:  # and this can be used to rename a field!
         - from:
             type: Query
             field: categories
